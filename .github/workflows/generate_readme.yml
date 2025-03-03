@@ -27,10 +27,18 @@ jobs:
       - name: Run script
         run: python main.py
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "Auto-update README.md" || exit 0
-          git push
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'Update Readme' || exit 0
+          git config --global --add safe.directory /github/workspace
+
+      - name: Force push to main
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true
+          directory: ./
