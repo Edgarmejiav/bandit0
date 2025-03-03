@@ -53,3 +53,4 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 Visit the official OverTheWire website: [https://overthewire.org/wargames/](https://overthewire.org/wargames/)
 
 - [level0.md](./level0.md)
+- [level1.md](./level1.md)
