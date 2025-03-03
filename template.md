@@ -25,3 +25,4 @@ From there, follow the instructions provided in each level's documentation.
 ## More Information
 Visit the official OverTheWire website: [https://overthewire.org/wargames/](https://overthewire.org/wargames/)
 
+{{MD_FILES_LIST}}
